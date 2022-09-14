@@ -1,6 +1,8 @@
 import Header from '../Header/Header';
 import LandingHeader from '../Header/LandingHeader/LandingHeader';
 import Promo from '../Main/Promo/Promo';
+import NavTab from '../Main/NavTab/NavTab';
+import AboutProject from '../Main/AboutProject/AboutProject';
 
 function Main() {
   return (
@@ -12,6 +14,8 @@ function Main() {
         <LandingHeader />
       </Header>
       <Promo />
+      <NavTab />
+      <AboutProject />
     </main>
   );
 }
