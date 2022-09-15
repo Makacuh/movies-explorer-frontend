@@ -4,6 +4,8 @@ import Promo from '../Main/Promo/Promo';
 import NavTab from '../Main/NavTab/NavTab';
 import AboutProject from '../Main/AboutProject/AboutProject';
 import Technologies from '../Main/Technologies/Technologies';
+import Portfolio from '../Main/Portfolio/Portfolio';
+import AboutStudent from '../Main/AboutStudent/AboutStudent';
 
 function Main() {
   return (
@@ -18,6 +20,8 @@ function Main() {
       <NavTab />
       <AboutProject />
       <Technologies />
+      <AboutStudent />
+      <Portfolio />
     </main>
   );
 }
