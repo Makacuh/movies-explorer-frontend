@@ -2,6 +2,7 @@ import HeaderSavedMovies from '../HeaderSavedMovies/HeaderSavedMovies';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './HeaderMainMovies.css';
+import accountLogo from '../../../images/account_icon.svg';
 
 function HeaderMainMovies() {
   const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState('');
@@ -25,6 +26,8 @@ function HeaderMainMovies() {
         </ul>
         <Link to='/profile' className='navigate__account'>
           Аккаунт
+          <img className="navigate__account_logo" src={accountLogo}
+              alt="иконка аккаунта"/>
         </Link>
       </nav>
       <button

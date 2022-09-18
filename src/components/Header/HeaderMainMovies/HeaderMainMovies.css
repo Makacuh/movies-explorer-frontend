@@ -8,7 +8,7 @@
   .navigate__list {
     display: flex;
     list-style-type: none;
-    margin: 0 0 0 44px;
+    margin: 0 auto;
     padding: 0;
   }
   
@@ -17,7 +17,7 @@
   }
   
   .navigate__movies {
-    font-weight: 500;
+    font-weight: 400;
     font-size: 13px;
     line-height: 18px;
     text-decoration: none;
@@ -33,15 +33,23 @@
   }
   
   .navigate__account {
-    display: inline-block;
+    display: flex;
+    align-items: center;
     border-radius: 20px;
     padding: 8px 20px;
     font-weight: 500;
+    font-style: normal;
     font-size: 14px;
     line-height: 114%;
     text-decoration: none;
     color: #000;
-    background: #F4F4F4;
+  }
+
+  .navigate__account_logo {
+    margin: 0 0 0 13px;
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 6px;
   }
   
   .navigate__button-open {
