@@ -1,6 +1,7 @@
 import Header from '../Header/Header';
 import MainMoviesHeader from '../Header/HeaderMainMovies/HeaderMainMovies';
 import Footer from '../Footer/Footer';
+import SearchForm from './Search/Search';
 
 function MainMovies() {
   return (
@@ -12,6 +13,7 @@ function MainMovies() {
         <MainMoviesHeader />
       </Header>
       <main className='movies'>
+      <SearchForm />
         <Footer />
 
       </main>
