@@ -6,6 +6,7 @@ import AboutProject from '../Main/AboutProject/AboutProject';
 import Technologies from '../Main/Technologies/Technologies';
 import Portfolio from '../Main/Portfolio/Portfolio';
 import AboutStudent from '../Main/AboutStudent/AboutStudent';
+import Footer from '../Footer/Footer';
 
 function Main() {
   return (
@@ -22,6 +23,7 @@ function Main() {
       <Technologies />
       <AboutStudent />
       <Portfolio />
+      <Footer />
     </main>
   );
 }
