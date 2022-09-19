@@ -13,6 +13,8 @@
     width: 360px;
     height: 201px;
     object-fit: cover;
+    border-radius: 6px;
+    cursor: pointer;
   }
   
   .movie-card__description {
@@ -41,7 +43,13 @@
     position: absolute;
     top: 10px;
     left: 280px;
+    opacity: 0;
+  transition: opacity .35s ease;
   }
+
+  .movie-card__item:hover .movies-card__button_save {
+    opacity: 1;
+}
   
   .movies-card__button_save-active {
     background-image: url("../../../images/save_activ.svg");
@@ -82,11 +90,21 @@
       width: 339px;
       height: 190px;
     }
+
+    .movies-card__button_save {
+      top: 10px;
+      left: 260px;
+    }
   }
   
   @media screen and (max-width: 420px) {
     .movie-card__image {
       width: 300px;
       height: 168px;
+    }
+
+    .movies-card__button_save {
+      top: 10px;
+      left: 220px;
     }
   }

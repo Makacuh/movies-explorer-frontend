@@ -10,7 +10,7 @@ function MoviesCard({ name, duration, thumbnail, type }) {
   return (
     <li className='movie-card__item'>
         
-        <img src={thumbnail} alt={name} className='movie-card__image' />
+        <img src={thumbnail} alt={name} className='movie-card__image'/>
         
         
         <div className='movie-card__description'>
