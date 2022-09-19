@@ -3,7 +3,7 @@ import './MoviesCard.css';
 function MoviesCard({ name, duration, thumbnail, type }) {
   let hours = Math.floor(duration / 60);
   let minutes = Math.floor(duration - hours * 60);
-  let buttonClassName = `movies-card__button movies-card__button_save ${
+  let buttonClassName = `movies-card__button movies-card__button_save movies-card__button_save_active ${
     type === 'save' ? 'movies-card__button_delete' : ''
   }`;
 

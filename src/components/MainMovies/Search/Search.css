@@ -55,7 +55,7 @@
     .search__container {
       display: block;
       padding: 60px 0 44px;
-      width: calc(100% - 30px * 2);
+      width: calc(100% - 22px * 2);
     }
   
     .search__form {
@@ -63,7 +63,7 @@
     }
   
     .search__input {
-      padding: 13px 20px;
+      padding: 27px 20px;
     }
   }
   
@@ -77,8 +77,15 @@
     }
   
     .search__input {
-      padding: 13px 20px;
+      padding: 17.5px 20px;
       font-size: 11px;
       line-height: 18px;
+    }
+
+    .search__button {
+      width: 80px;
+      height: 44px;
+      right: 6px;
+      top: 6px;
     }
   }
