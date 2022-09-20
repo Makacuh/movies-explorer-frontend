@@ -41,8 +41,8 @@
   .movies-card__button_save {
     background-image: url("../../../images/save.svg");
     position: absolute;
-    top: 10px;
-    left: 280px;
+    top: 5px;
+    left: 285px;
     opacity: 0;
   transition: opacity .35s ease;
   }
@@ -56,8 +56,6 @@
     position: absolute;
     top: 10px;
     left: 280px;
-    opacity: 0;
-  transition: opacity .35s ease;
   }
   
   .movies-card__button {
@@ -114,6 +112,11 @@
     .movies-card__button_save {
       top: 10px;
       left: 220px;
+    }
+
+    .movies-card__button_save-active {
+      top: 5px;
+      left: 245px;
     }
 
     .movie-card__description {
