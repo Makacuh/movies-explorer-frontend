@@ -9,10 +9,7 @@ function MoviesCard({ name, duration, thumbnail, type }) {
 
   return (
     <li className='movie-card__item'>
-        
         <img src={thumbnail} alt={name} className='movie-card__image' />
-        
-        
         <div className='movie-card__description'>
           <h3 className='movie-card__title'>{name}</h3>
           <button className='movies-card__button movies-card__button_save' type='button'></button>
