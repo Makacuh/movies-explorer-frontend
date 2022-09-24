@@ -33,6 +33,7 @@
   @media screen and (max-width: 768px) {
     .header__box {
       padding: 0 30px;
+      justify-content: space-between;
     }
   
     @media screen and (max-width: 768px) {
@@ -49,5 +50,6 @@
   @media screen and (max-width: 320px) {
     .header__box {
       padding: 0 14px;
+      justify-content: space-between;
     }
   }
