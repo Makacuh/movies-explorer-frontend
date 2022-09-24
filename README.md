@@ -1,6 +1,6 @@
 # Дипломный проект Movies-explorer (Фронтенд). 
 
-## [Ссылка на макет в figma] (https://disk.yandex.ru/d/_Tw7c06LXcDvQA)
+## [Ссылка на макет в figma](https://disk.yandex.ru/d/_Tw7c06LXcDvQA)
 
 * Верстка
   - Cовременная верстка с использованием Flexbox и Grid Layout
