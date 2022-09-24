@@ -4,6 +4,7 @@ import SavedMovies from '../SavedMovies/SavedMovies';
 import Login from '../ProfileUser/Login/Login';
 import Profile from '../ProfileUser/Profile/Profile';
 import Register from '../ProfileUser/Register/Register';
+import PageNotFound from '../PageNotFound/PageNotFound';
 
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
@@ -18,6 +19,7 @@ function App() {
         <Route path='/signin' element={<Login />} />
         <Route path='/profile' element={<Profile />} />
         <Route path='/signup' element={<Register />} />
+        <Route path='*' element={<PageNotFound />} />
 
       </Routes>
     </div>
