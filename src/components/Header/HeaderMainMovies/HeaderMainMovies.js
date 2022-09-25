@@ -1,4 +1,4 @@
-import HeaderSavedMovies from '../HeaderSavedMovies/HeaderSavedMovies';
+import HeaderSavedMovies from '../BurgerMenu/BurgerMenu';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './HeaderMainMovies.css';
@@ -27,7 +27,7 @@ function HeaderMainMovies() {
         <Link to='/profile' className='navigate__account'>
           Аккаунт
           <img className="navigate__account_logo" src={accountLogo}
-              alt="иконка аккаунта"/>
+              alt="Иконка аккаунта"/>
         </Link>
       </nav>
       <button

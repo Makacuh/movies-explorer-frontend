@@ -9,7 +9,7 @@ function Portfolio() {
           <li className="portfolio__item">
             <a
               className="portfolio__website"
-              href="#"
+              href="https://makacuh.github.io/how-to-learn/"
               target="_blank"
               rel="noreferrer"
             >
@@ -25,7 +25,7 @@ function Portfolio() {
           <li className="portfolio__item">
             <a
               className="portfolio__website"
-              href="#"
+              href="https://makacuh.github.io/russian-travel/"
               target="_blank"
               rel="noreferrer"
             >
@@ -41,7 +41,7 @@ function Portfolio() {
           <li className="portfolio__item">
             <a
               className="portfolio__website"
-              href="#"
+              href="https://makacuh.nomoredomains.sbs/"
               target="_blank"
               rel="noreferrer"
             >

@@ -47,9 +47,9 @@
   transition: opacity .35s ease;
   }
 
-  .movie-card__item:hover .movies-card__button_save {
+  /*.movie-card__item:hover .movies-card__button_save {
     opacity: 1;
-}
+}*/
   
   .movies-card__button_save-active {
     background-image: url("../../../images/save_activ.svg");
@@ -59,7 +59,7 @@
   }
   
   .movies-card__button {
-    padding: 0;
+  padding: 0;
   width: 72px;
   height: 21px;
   border: none;
@@ -74,6 +74,9 @@
     border: none;
     border-radius: 0;
     background: url(../../../images/btn-close-card.svg) no-repeat center;
+    position: absolute;
+    top: 10px;
+    right: -10px;
   }
   
   .movie-card__time {

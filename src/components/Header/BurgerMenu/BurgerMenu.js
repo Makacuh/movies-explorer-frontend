@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
-import './HeaderSavedMovies.css';
+import './BurgerMenu.css';
+import accountLogo from '../../../images/account_icon.svg';
 
-function HeaderSavedMovies({ isOpen, isClose }) {
+function BurgerMenu({ isOpen, isClose }) {
   return (
     <div className={`burger-menu ${isOpen && 'open'}`}>
       <div className='burger-menu__container'>
@@ -23,10 +24,12 @@ function HeaderSavedMovies({ isOpen, isClose }) {
         </nav>
         <Link to='/saved-movies' className='burger-menu__btn-profile'>
           Аккаунт
+          <img className="navigate__account_logo" src={accountLogo}
+              alt="Иконка аккаунта"/>
         </Link>
       </div>
     </div>
   );
 }
 
-export default HeaderSavedMovies;
+export default BurgerMenu;
