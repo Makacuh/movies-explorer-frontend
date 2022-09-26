@@ -3,8 +3,21 @@ import HeaderMainMovies from '../Header/HeaderMainMovies/HeaderMainMovies';
 import MoviesList from '../MainMovies/MoviesList/MoviesList';
 import Footer from '../Footer/Footer';
 import Search from '../MainMovies/Search/Search';
+import Preloader from '../MainMovies/Preloader/Preloader';
 
-function SavedMovies() {
+function SavedMovies({
+  movies,
+  onSubmit,
+  isLoading,
+  isFailed,
+  isNotFound,
+  searchKeyword,
+  onCheckbox,
+  checked,
+  savedMovies,
+  onSave,
+  onDelete,
+}) {
   return (
     <>
       <Header
@@ -14,8 +27,25 @@ function SavedMovies() {
         <HeaderMainMovies />
       </Header>
       <main className='save-movies'>
-        <Search></Search>
-        <MoviesList type='save' size={3}></MoviesList>
+        <Search>
+          onSubmit={onSubmit}
+          searchKeyword={searchKeyword}
+          onCheckbox={onCheckbox}
+          checked={checked}
+          </Search>
+        {isLoading ? (
+          <Preloader />
+        ) : (
+          <MoviesList>
+            checked={checked}
+            movies={movies}
+            isNotFound={isNotFound}
+            isFailed={isFailed}
+            savedMovies={savedMovies}
+            onSave={onSave}
+            onDelete={onDelete}
+            </MoviesList>
+        )}
       </main>
       <Footer></Footer>
     </>
