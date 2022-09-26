@@ -4,7 +4,20 @@ import Footer from '../Footer/Footer';
 import Search from './Search/Search';
 import MoviesList from './MoviesList/MoviesList';
 
-function MainMovies() {
+function MainMovies({
+  onSubmit,
+  movies,
+  isLoading,
+  isFailed,
+  isNotFound,
+  searchKeyword,
+  savedMovies,
+  onSave,
+  onDelete,
+  onCheckbox,
+  checked,
+  localCheckbox
+}) {
   return (
     <>
       <Header
@@ -14,8 +27,24 @@ function MainMovies() {
         <HeaderMainMovies />
       </Header>
       <main className='movies'>
-      <Search />
-      <MoviesList />
+        <Search
+          onSubmit={onSubmit}
+          searchKeyword={searchKeyword}
+          onCheckbox={onCheckbox}
+          checked={checked}
+          localCheckbox={localCheckbox}
+        />
+        <MoviesList
+          movies={movies}
+          isNotFound={isNotFound}
+          isFailed={isFailed}
+          searchKeyword={searchKeyword}
+          savedMovies={savedMovies}
+          onSave={onSave}
+          onDelete={onDelete}
+          onCheckbox={onCheckbox}
+          checked={checked}
+        />
         <Footer />
 
       </main>
