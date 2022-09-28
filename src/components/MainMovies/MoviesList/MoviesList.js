@@ -1,26 +1,36 @@
 import './MoviesList.css';
 import MoviesCard from '../MoviesCard/MoviesCard';
 import data from '../../../utils/data';
+import { useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
-function MoviesList({ type, size }) {
-  const [movies, setMovies] = useState([]);
+function MoviesList({ 
+  movies,
+  isNotFound,
+  isFailed,
+  savedMovies,
+  onSave,
+  onDelete,
+  checked,
+  checkedSaveMovies,
+  allSavedMovies, }) {
+    const [moviesToLoad, setMoviesToLoad] = useState(0);
+    const [displayedMovies, setDisplayedMovies] = useState(0);
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const location = useLocation();
 
-  useEffect(() => {
-    if (size === 3) return setMovies(data.slice(0, 3));
-    const windowSize = window.innerWidth;
-    if (windowSize <= 320) {
-      return setMovies(data.slice(0, 5));
-    } else if (windowSize <= 768) {
-      return setMovies(data.slice(0, 8));
-    } else {
-      return setMovies(data);
-    }
-  }, [data]);
+    const searchShortMovies = (movies) => {
+      const searchShortMoviesArr = movies.slice(0);
+      return searchShortMoviesArr.filter((item) => item.duration <= 40);
+    };
 
-  let hiddenButton = `movies-list__button ${
-    type === 'save' ? 'movies-list__button_hidden' : ''
-  }`;
+    let saveMoviesFilterArr = !checkedSaveMovies
+    ? searchShortMovies(savedMovies)
+    : savedMovies;
+
+    const handleShowMoreMovies = () => {
+      setDisplayedMovies((movies) => movies + moviesToLoad);
+    };
 
   return (
     <section className='movies-list'>
