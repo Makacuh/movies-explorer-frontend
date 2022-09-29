@@ -6,7 +6,8 @@ import Profile from '../ProfileUser/Profile/Profile';
 import Register from '../ProfileUser/Register/Register';
 import PageNotFound from '../PageNotFound/PageNotFound';
 
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useNavigate, useLocation } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import './App.css';
 
 function App() {

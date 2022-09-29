@@ -3,6 +3,7 @@ import HeaderMainMovies from '../Header/HeaderMainMovies/HeaderMainMovies';
 import Footer from '../Footer/Footer';
 import Search from './Search/Search';
 import MoviesList from './MoviesList/MoviesList';
+import Preloader from './Preloader/Preloader';
 
 function MainMovies({
   onSubmit,
@@ -34,6 +35,9 @@ function MainMovies({
           checked={checked}
           localCheckbox={localCheckbox}
         />
+        {isLoading ? (
+          <Preloader />
+        ) : (
         <MoviesList
           movies={movies}
           isNotFound={isNotFound}
@@ -45,10 +49,11 @@ function MainMovies({
           onCheckbox={onCheckbox}
           checked={checked}
         />
-        <Footer />
-
+        )}
       </main>
-    </>
+
+<Footer />
+</>
   );
 }
 
