@@ -55,7 +55,7 @@ function Search({
             minLength='1'
             maxLength='30'
           />
-          <button type='submit' className='search__button'></button>
+          <button type='submit' className='search__button'>Поиск</button>
           <span className='search__error'>{!isFormValid && errorText}</span>
         </form>
 

@@ -1,4 +1,4 @@
-export const BASE_URL = 'https://api.movies.explorer.nomorepartiesxyz.ru';
+export const BASE_URL = 'http://api.makacu.movies.nomoredomains.icu/';
 const checkResponse = (res) => {
   return res.ok ? res.json() : Promise.reject(`Ошибка: ${res.status}`);
 };

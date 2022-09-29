@@ -21,7 +21,7 @@ class MoviesApi {
   }
   
   const moviesApi = new MoviesApi({
-    url: 'https://api.nomoreparties.co/beatfilm-movies',
+    url: 'http://api.makacu.movies.nomoredomains.icu/',
   });
   
   export default moviesApi;
