@@ -1,6 +1,7 @@
 # Дипломный проект Movies-explorer (Фронтенд). 
 
 ## [Ссылка на макет в figma](https://disk.yandex.ru/d/_Tw7c06LXcDvQA)
+## [Ссылка на pull request](https://github.com/Makacuh/movies-explorer-frontend/pull/2)
 
 * Верстка
   - Cовременная верстка с использованием Flexbox и Grid Layout
