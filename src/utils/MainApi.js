@@ -63,7 +63,7 @@ class MainApi {
   }
   
   const mainApi = new MainApi({
-    url: 'http://api.makacu.movies.nomoredomains.icu/',
+    url: 'https://api.makacu.movies.nomoredomains.icu',
   });
   
   export default mainApi;
