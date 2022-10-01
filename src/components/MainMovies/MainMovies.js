@@ -17,7 +17,8 @@ function MainMovies({
   onDelete,
   onCheckbox,
   checked,
-  localCheckbox
+  checkedSaveMovies,
+  allSavedMovies,
 }) {
   return (
     <>
@@ -33,21 +34,23 @@ function MainMovies({
           searchKeyword={searchKeyword}
           onCheckbox={onCheckbox}
           checked={checked}
-          localCheckbox={localCheckbox}
+          checkedSaveMovies={checkedSaveMovies}
         />
         {isLoading ? (
           <Preloader />
         ) : (
         <MoviesList
-          movies={movies}
-          isNotFound={isNotFound}
-          isFailed={isFailed}
-          searchKeyword={searchKeyword}
-          savedMovies={savedMovies}
-          onSave={onSave}
-          onDelete={onDelete}
-          onCheckbox={onCheckbox}
-          checked={checked}
+        movies={movies}
+        isNotFound={isNotFound}
+        isFailed={isFailed}
+        searchKeyword={searchKeyword}
+        savedMovies={savedMovies}
+        onSave={onSave}
+        onDelete={onDelete}
+        onCheckbox={onCheckbox}
+        checked={checked}
+        checkedSaveMovies={checkedSaveMovies}
+        allSavedMovies={allSavedMovies}
         />
         )}
       </main>

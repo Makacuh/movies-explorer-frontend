@@ -280,7 +280,7 @@ function App() {
         <Route
           path='/movies'
           element={
-            
+            <ProtectedRoute loggedIn={loggedIn}>
               <MainMovies
                 onSubmit={handleSearchMovies}
                 movies={movies}
@@ -296,13 +296,13 @@ function App() {
                 onDelete={handleDeleteMovie}
                 allSavedMovies={allSavedMovies}
               ></MainMovies>
-            
+             </ProtectedRoute>
           }
         />
         <Route
           path='/saved-movies'
           element={
-            
+            <ProtectedRoute loggedIn={loggedIn}>
               <SavedMovies
                 onSubmit={handleSearchSavedMovies}
                 movies={movies}
@@ -318,19 +318,19 @@ function App() {
                 onDelete={handleDeleteMovie}
                 allSavedMovies={allSavedMovies}
               ></SavedMovies>
-            
+            </ProtectedRoute>
           }
         />
         <Route
           path='/profile'
           element={
-            
+            <ProtectedRoute loggedIn={loggedIn}>
               <Profile
                 onUpdateUser={onUpdateUser}
                 onSignOut={onSignOut}
                 isMessageProfile={isMessageProfile}
               />
-           
+           </ProtectedRoute>
           }
         />
         <Route
