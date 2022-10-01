@@ -2,7 +2,8 @@
 
 ## [Ссылка на макет в figma](https://disk.yandex.ru/d/_Tw7c06LXcDvQA)
 ## [Ссылка на pull request](https://github.com/Makacuh/movies-explorer-frontend/pull/2)
-
+## [Ссылка на домен](https://makacu.movies.nomoredomains.icu/)
+Публичный IP-адрес сервера: 84.252.137.38
 * Верстка
   - Cовременная верстка с использованием Flexbox и Grid Layout
   - Семантическая верстка
