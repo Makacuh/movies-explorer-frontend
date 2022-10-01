@@ -18,6 +18,16 @@
     width: 100%;
   }
   
+  .search__error {
+    position: absolute;
+    left: 50%;
+    bottom: -30px;
+    font-weight: 400;
+    font-size: 13px;
+    color: red;
+    transform: translate(-50%, -50%);
+  }
+
   .search__input {
     flex-grow: 1;
     outline: none;

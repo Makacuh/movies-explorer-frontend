@@ -212,8 +212,8 @@ function App() {
         err.status !== 400
           ? setRegisterMessage('Пользователь с таким email уже зарегистрирован')
           : setRegisterMessage(
-              'При регистрации пользователя произошла ошибка.'
-            );
+            'При регистрации пользователя произошла ошибка.'
+          );
         setIsErrorRegisterBtn(true);
       });
   };
@@ -296,7 +296,7 @@ function App() {
                 onDelete={handleDeleteMovie}
                 allSavedMovies={allSavedMovies}
               ></MainMovies>
-             </ProtectedRoute>
+            </ProtectedRoute>
           }
         />
         <Route
@@ -330,7 +330,7 @@ function App() {
                 onSignOut={onSignOut}
                 isMessageProfile={isMessageProfile}
               />
-           </ProtectedRoute>
+            </ProtectedRoute>
           }
         />
         <Route

@@ -14,9 +14,11 @@ function SavedMovies({
   searchKeyword,
   onCheckbox,
   checked,
+  checkedSaveMovies,
   savedMovies,
   onSave,
   onDelete,
+  allSavedMovies,
 }) {
   return (
     <>
@@ -27,24 +29,27 @@ function SavedMovies({
         <HeaderMainMovies />
       </Header>
       <main className='save-movies'>
-        <Search>
+        <Search
           onSubmit={onSubmit}
           searchKeyword={searchKeyword}
           onCheckbox={onCheckbox}
           checked={checked}
-          </Search>
+          checkedSaveMovies={checkedSaveMovies}
+        ></Search>
         {isLoading ? (
           <Preloader />
         ) : (
-          <MoviesList>
+          <MoviesList
             checked={checked}
+            checkedSaveMovies={checkedSaveMovies}
             movies={movies}
             isNotFound={isNotFound}
             isFailed={isFailed}
             savedMovies={savedMovies}
             onSave={onSave}
             onDelete={onDelete}
-            </MoviesList>
+            allSavedMovies={allSavedMovies}
+          ></MoviesList>
         )}
       </main>
       <Footer></Footer>

@@ -10,15 +10,14 @@ function MoviesCard({ name,
   onDelete,
   movie,
   allSavedMovies, }) {
-    console.log(allSavedMovies)
-    const location = useLocation();
+  const location = useLocation();
   let hours = Math.floor(duration / 60);
   let minutes = Math.floor(duration - hours * 60);
   const isSaved = savedMovies.some((m) => m.movieId === movie.id);
   const isAllSaved = allSavedMovies.some((m) => m.movieId === movie.id);
 
-  let buttonClassName = isSaved || isAllSaved ? 'movies-card__button movies-card__button_delete' : 'movies-card__button movies-card__button_save-active'
-  ;
+  let buttonClassName = isSaved || isAllSaved ? 'movies-card__button movies-card__button_save-active' : 'movies-card__button movies-card__button_save'
+    ;
 
   const handleDeleteMovie = () => onDelete(movie);
 
@@ -38,8 +37,8 @@ function MoviesCard({ name,
         target='_blank'
         rel='noreferrer'
       ></a>
-        <img src={thumbnail} alt={name} className='movie-card__image' />
-        <div className='movie-card__block'>
+      <img src={thumbnail} alt={name} className='movie-card__image' />
+      <div className='movie-card__block'>
         <div className='movie-card__description'>
           <h3 className='movie-card__title'>{name}</h3>
 
@@ -58,12 +57,12 @@ function MoviesCard({ name,
               onClick={handleDeleteMovie}
             ></button>
           )}
-          </div>
-          <div className='movie-card__time'>
+        </div>
+        <div className='movie-card__time'>
           {hours}ч{minutes}
         </div>
-        
-        </div>
+
+      </div>
     </li>
   );
 }
