@@ -36,8 +36,9 @@ function MoviesCard({ name,
         className='movie-card__trailer-link'
         target='_blank'
         rel='noreferrer'
-      ></a>
+      >
       <img src={thumbnail} alt={name} className='movie-card__image' />
+      </a>
       <div className='movie-card__block'>
         <div className='movie-card__description'>
           <h3 className='movie-card__title'>{name}</h3>
