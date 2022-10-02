@@ -1,6 +1,6 @@
 import './Profile.css';
 import Header from '../../Header/Header';
-import MainMovies from '../../Header/HeaderMainMovies/HeaderMainMovies';
+import HeaderMainMovies from '../../Header/HeaderMainMovies/HeaderMainMovies';
 import { useState, useContext } from 'react';
 import { useFormWithValidation } from '../../../utils/validation/useFormWithValidation';
 import { CurrentUserContext } from '../../../contexts/CurrentUserContext';
@@ -46,10 +46,10 @@ function Profile({ onUpdateUser, onSignOut, isMessageProfile }) {
   return (
     <>
       <Header
-        color={'header__theme_black'}
+        color={'header__theme_white'}
         location={'header__container_movies'}
       >
-        <MainMovies />
+        <HeaderMainMovies />
       </Header>
       <main className='profile'>
         <div className='profile__container'>
@@ -97,7 +97,7 @@ function Profile({ onUpdateUser, onSignOut, isMessageProfile }) {
                 </span>
                 <button
                   className='profile__button'
-                  disabled={disableUserCurrentCheck || !controlInput.isValid}
+                  disabled={disableUserCurrentCheck}
                 >
                   Сохранить
                 </button>
