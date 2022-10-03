@@ -77,7 +77,7 @@ function App() {
         .then((res) => {
           if (res) {
             setLoggedIn(true);
-            navigate(location.pathname);
+            navigate('/movies');
           }
         })
         .catch((err) => {
