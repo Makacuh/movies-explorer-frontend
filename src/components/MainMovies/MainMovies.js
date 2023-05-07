@@ -3,8 +3,23 @@ import HeaderMainMovies from '../Header/HeaderMainMovies/HeaderMainMovies';
 import Footer from '../Footer/Footer';
 import Search from './Search/Search';
 import MoviesList from './MoviesList/MoviesList';
+import Preloader from './Preloader/Preloader';
 
-function MainMovies() {
+function MainMovies({
+  onSubmit,
+  movies,
+  isLoading,
+  isFailed,
+  isNotFound,
+  searchKeyword,
+  savedMovies,
+  onSave,
+  onDelete,
+  onCheckbox,
+  checked,
+  checkedSaveMovies,
+  allSavedMovies,
+}) {
   return (
     <>
       <Header
@@ -14,12 +29,34 @@ function MainMovies() {
         <HeaderMainMovies />
       </Header>
       <main className='movies'>
-      <Search />
-      <MoviesList />
-        <Footer />
-
+        <Search
+          onSubmit={onSubmit}
+          searchKeyword={searchKeyword}
+          onCheckbox={onCheckbox}
+          checked={checked}
+          checkedSaveMovies={checkedSaveMovies}
+        />
+        {isLoading ? (
+          <Preloader />
+        ) : (
+        <MoviesList
+        movies={movies}
+        isNotFound={isNotFound}
+        isFailed={isFailed}
+        searchKeyword={searchKeyword}
+        savedMovies={savedMovies}
+        onSave={onSave}
+        onDelete={onDelete}
+        onCheckbox={onCheckbox}
+        checked={checked}
+        checkedSaveMovies={checkedSaveMovies}
+        allSavedMovies={allSavedMovies}
+        />
+        )}
       </main>
-    </>
+
+<Footer />
+</>
   );
 }
 

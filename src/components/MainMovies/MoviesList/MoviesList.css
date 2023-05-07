@@ -40,6 +40,31 @@
   .movies-list__button_hidden {
     display: none;
   }
+
+  .movies-list__not-found {
+    display: none;
+  }
+  
+  .movies-list__not-found_visible {
+    display: block;
+    margin: 0;
+    font-size: 20px;
+    text-align: center;
+    color: #000;
+  }
+  
+  .movies-list__error {
+    display: none;
+  }
+  
+  .movies-list__error_visible {
+    display: block;
+    margin: 0;
+    font-weight: 400;
+    font-size: 13px;
+    text-align: center;
+    color: #000;
+  }
   
   @media screen and (max-width: 1279px) {
     .movies-list__button {
