@@ -1,4 +1,4 @@
-export const BASE_URL = 'https://movies-api.site/';
+export const BASE_URL = 'https://movies-api.site';
 const checkResponse = (res) => {
   return res.ok ? res.json() : Promise.reject(`Ошибка: ${res.status}`);
 };
